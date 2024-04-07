@@ -1,21 +1,194 @@
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
 }
 
 @font-face {
-    font-family: "Norse-Bold";
-    src: url(font/Norse-Bold.otf);
+  font-family: "Norse-Bold";
+  src: url(font/Norse-Bold.otf);
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    font-family: "Caladea", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+input,
+label {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.app {
+  outline: 1px solid black;
+
+  width: 1440px;
+  height: 1024px;
+
+  display: flex;
+
+  /* BACKGROUND */
+  .background {
+    width: 40%;
+    padding-top: 200px;
+    padding-bottom: 15px;
+
+    background-image: url(img/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+
+    .logo {
+      padding: 10px 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: rgb(0 0 0 / 40%);
+      .logo-img {
+        width: 20%;
+      }
+
+      .logo-text {
+        font-family: "Norse-Bold";
+        font-size: 100px;
+      }
+    }
+
+    .bottom-text {
+        a {
+            color: inherit;
+        }
+    }
+  }
+
+  /* MAIN */
+
+  .main {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+
+    .main-text {
+      width: 88%;
+
+      text-align: left;
+        
+      padding: 90px 45px;
+      padding-top: 150px;
+
+      .primary {
+        margin-bottom: 15px;
+      }
+
+      .secondary span {
+        font-style: italic;
+      }
+    }
+
+    .form {
+      width: 100%;
+      text-transform: uppercase;
+
+      .functionality {
+        box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        .func-text {
+          margin-bottom: 20px;
+        }
+
+        padding: 20px 45px;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        .main-functionality {
+          display: flex;
+          flex-wrap: wrap;
+
+          .functionality-block {
+            padding-bottom: 20px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            input {
+              width: 70%;
+
+              border: 1px solid #e5e7eb;
+              border-radius: 5px;
+              outline: none;
+              background-color: none;
+
+              padding: 5px 10px;
+            }
+
+            input:focus {
+              border: 1px solid blue;
+            }
+
+            .password:invalid {
+                border: 1px solid red;
+            }
+
+            .password:invalid + span::before {
+                content: "* Password do not match";
+                display: block;
+                
+                text-transform: capitalize;
+                font-size: 80%;
+
+                color: red;
+            }
+          }
+        }
+      }
+
+      .confirm-section {
+        padding: 30px 45px;
+        text-transform: capitalize;
+        .btn {
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: bold;
+
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          background-color: #596d48;
+          color: white;
+
+          padding: 15px 60px;
+
+          margin-bottom: 20px;
+        }
+        .already {
+            text-decoration: none;
+            color: #596d48;
+        }
+      }
+    }
+  }
+}

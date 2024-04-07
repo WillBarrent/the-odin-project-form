@@ -10,9 +10,82 @@
       href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    
+    <div class="app">
+      <div class="background">
+        <div class="logo">
+          <img src="img/odin-lined.png" alt="Odin Logo" class="logo-img" />
+          <h1 class="logo-text">ODIN</h1>
+        </div>
+        <div class="bottom-text">Photo by <a href="">Halie West</a> on <a href="">Unsplash</a></div>
+      </div>
+      <div class="main">
+        <div class="main-text">
+          <h2 class="primary">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepset dreams. Sign up
+            now to get started.
+          </h2>
+          <h2 class="secondary">You <span>know</span> you want to.</h2>
+        </div>
+        <form action="" class="form">
+          <section class="functionality">
+            <h2 class="func-text">Let`s do this!</h2>
+            <div class="main-functionality">
+              <div class="functionality-block">
+                <label for="first-name" class="for-first-name"
+                  >First Name</label
+                >
+                <input type="text" id="first-name" />
+              </div>
+              <div class="functionality-block">
+                <label for="second-name" class="for-second-name"
+                  >Second Name</label
+                >
+                <input type="text" id="second-name" />
+              </div>
+              <div class="functionality-block">
+                <label for="email" class="for-email">Email</label>
+                <input type="email" id="email" />
+              </div>
+              <div class="functionality-block">
+                <label for="tel" class="for-tel">Phone Number</label>
+                <input type="tel" id="tel" />
+              </div>
+              <div class="functionality-block">
+                <label for="password" class="for-password">Password</label>
+                <input type="password" id="password" class="password" required />
+                <span class="validation"></span>
+              </div>
+              <div class="functionality-block">
+                <label for="password" class="for-confirm"
+                  >Confirm password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="password"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+          <div class="confirm-section">
+            <button class="btn">Create Account</button>
+            <div class="sign-in">
+              Already Have An Account? <a href="" class="already">Log In</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
