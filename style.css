@@ -6,6 +6,10 @@
   box-sizing: inherit;
 }
 
+:root {
+  --text: "* Password do not match!";
+}
+
 @font-face {
   font-family: "Norse-Bold";
   src: url(font/Norse-Bold.otf);
@@ -75,9 +79,9 @@ label {
     }
 
     .bottom-text {
-        a {
-            color: inherit;
-        }
+      a {
+        color: inherit;
+      }
     }
   }
 
@@ -93,7 +97,7 @@ label {
       width: 88%;
 
       text-align: left;
-        
+
       padding: 90px 45px;
       padding-top: 150px;
 
@@ -111,7 +115,7 @@ label {
       text-transform: uppercase;
 
       .functionality {
-        box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
         .func-text {
           margin-bottom: 20px;
         }
@@ -150,17 +154,17 @@ label {
             }
 
             .password:invalid {
-                border: 1px solid red;
+              border: 1px solid red;
             }
 
-            .password:invalid + span::before {
-                content: "* Password do not match";
-                display: block;
-                
-                text-transform: capitalize;
-                font-size: 80%;
+            .password:invalid + span.validation::before {
+              content: var(--text);
+              display: block;
 
-                color: red;
+              text-transform: capitalize;
+              font-size: 80%;
+
+              color: red;
             }
           }
         }
@@ -185,10 +189,20 @@ label {
           margin-bottom: 20px;
         }
         .already {
-            text-decoration: none;
-            color: #596d48;
+          text-decoration: none;
+          color: #596d48;
         }
       }
     }
   }
+}
+
+.check::before {
+  content: "* Password fields should match each other!";
+  display: block;
+
+  text-transform: capitalize;
+  font-size: 80%;
+
+  color: red;
 }
